@@ -13,6 +13,29 @@
 | `android/app/google-services.json` | إعدادات Firebase | نزّله من Firebase Console → Project Settings → Android App |
 | `keystore_b64.txt` | نسخة Base64 من المفتاح (لاستخدامها في GitHub Actions secrets) | احتفظ بها محلياً فقط، أو ضعها كـ GitHub Secret باسم `KEYSTORE_BASE64` |
 
+## 🚀 GitHub Actions (بناء تلقائي)
+
+يوجد workflow جاهز في `.github/workflows/android-build.yml` يبني APK + AAB موقّعين تلقائياً عند كل push على `main`، أو يدوياً من تبويب Actions.
+
+### الإعداد المطلوب (مرة واحدة فقط)
+
+روح لـ: **Settings → Secrets and variables → Actions → New repository secret** وأضف:
+
+| اسم Secret | المحتوى |
+|---|---|
+| `GOOGLE_SERVICES_JSON_BASE64` | `base64 -w 0 google-services.json` (شغّلها محلياً على ملف Firebase وانسخ المخرج) |
+| `KEYSTORE_BASE64` | `base64 -w 0 hajez-release.jks` |
+| `KEY_STORE_PASSWORD` | كلمة سر الـ keystore |
+| `KEY_PASSWORD` | كلمة سر الـ key alias |
+| `KEY_ALIAS` | اسم الـ alias (مثلاً `hajez`) |
+
+### تشغيل البناء
+
+- **تلقائي:** أي push على `main` يبني نسخة Release.
+- **يدوي:** تبويب **Actions → Android Build (APK + AAB) → Run workflow**، واختر `debug` لو بدك بناء سريع بدون توقيع (يحتاج فقط `GOOGLE_SERVICES_JSON_BASE64`).
+
+الناتج (AAB/APK) يطلع كـ **Artifact** بنفس صفحة الـ run، تحت "Artifacts" بالأسفل.
+
 ## التشغيل
 
 ```bash
