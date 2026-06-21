@@ -1,0 +1,44 @@
+# Flutter / Dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Android
+android/.gradle/
+android/captures/
+android/gradlew
+android/gradlew.bat
+android/local.properties
+**/android/key.properties
+android/app/*.jks
+android/app/*.keystore
+keystore_b64.txt
+
+# Firebase / Google services (sensitive configs)
+android/app/google-services.json
+ios/Runner/GoogleService-Info.plist
+
+# iOS
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+**/ios/Flutter/ephemeral/
+**/Pods/
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# Misc
+*.log
