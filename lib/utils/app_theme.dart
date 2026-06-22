@@ -197,7 +197,7 @@ class AppTheme {
       titleTextStyle: const TextStyle(fontFamily: 'Cairo', fontWeight: FontWeight.w700, fontSize: 20),
     ),
     dividerTheme: const DividerThemeData(thickness: 1, color: AppColors.grey200),
-    tabBarTheme: const TabBarTheme(
+    tabBarTheme: const TabBarThemeData(
       labelColor: AppColors.primary,
       unselectedLabelColor: AppColors.grey500,
       indicatorColor: AppColors.primary,
@@ -267,7 +267,7 @@ class AppTheme {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(AppRadius.xxl)),
     ),
     dividerTheme: const DividerThemeData(thickness: 1, color: AppDarkColors.border),
-    tabBarTheme: const TabBarTheme(
+    tabBarTheme: const TabBarThemeData(
       labelColor: AppDarkColors.primary,
       unselectedLabelColor: AppDarkColors.textSecondary,
       indicatorColor: AppDarkColors.primary,

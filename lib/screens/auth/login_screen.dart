@@ -31,7 +31,7 @@ class LoginScreen extends StatelessWidget {
                   padding: const EdgeInsets.fromLTRB(24, 40, 24, 36),
                   decoration: const BoxDecoration(
                     gradient: LinearGradient(colors: [AppColors.primaryDark, AppColors.primary], begin: Alignment.topLeft, end: Alignment.bottomRight),
-                    borderRadius: BorderRadius.vertical(bottomLeft: Radius.circular(36), bottomRight: Radius.circular(36)),
+                    borderRadius: BorderRadius.only(bottomLeft: Radius.circular(36), bottomRight: Radius.circular(36)),
                   ),
                   child: Column(
                     children: [

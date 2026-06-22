@@ -32,9 +32,7 @@ class FarmService {
       );
       return response['data'] is List
           ? response['data'] as List<dynamic>
-          : response is List
-              ? response
-              : <dynamic>[];
+          : <dynamic>[];
     } on ApiException {
       rethrow;
     }

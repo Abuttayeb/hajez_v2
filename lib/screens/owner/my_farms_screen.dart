@@ -41,7 +41,7 @@ class _MyFarmsScreenState extends State<MyFarmsScreen> {
     }
   }
 
-  void _load() async {
+  Future<void> _load() async {
     setState(() => _loading = true);
     try {
       final res = await FarmService.getMyFarms();

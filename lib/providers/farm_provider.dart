@@ -35,13 +35,7 @@ class FarmProvider extends ChangeNotifier {
   Future<void> loadCategories() async {
     try {
       final res = await FarmService.getCategories();
-      if (res is Map && res.containsKey('data')) {
-        _categories = List<dynamic>.from(res['data'] ?? []);
-      } else if (res is List) {
-        _categories = res;
-      } else {
-        _categories = [];
-      }
+      _categories = res;
       notifyListeners();
     } on ApiException {
       // صامت - نحملها لاحقاً

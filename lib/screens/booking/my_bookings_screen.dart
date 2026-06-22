@@ -160,7 +160,13 @@ class _BookingShimmer extends StatelessWidget {
       margin: const EdgeInsets.only(bottom: 14),
       decoration: BoxDecoration(color: AppColors.white, borderRadius: BorderRadius.circular(AppRadius.xl)),
       child: Column(children: [
-        Container(height: 120, color: AppColors.grey200, borderRadius: const BorderRadius.vertical(top: Radius.circular(AppRadius.xl))),
+        Container(
+          height: 120,
+          decoration: BoxDecoration(
+            color: AppColors.grey200,
+            borderRadius: const BorderRadius.vertical(top: Radius.circular(AppRadius.xl)),
+          ),
+        ),
         const Padding(
           padding: EdgeInsets.all(14),
           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [

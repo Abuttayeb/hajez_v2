@@ -74,7 +74,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Future<void> _loadUnreadCount() async {
     try {
-      final count = await FarmService.getUnreadCount();
+      final res = await FarmService.getUnreadCount();
+      final count = (res['unread_count'] ?? 0) as int;
       if (mounted) setState(() => _unreadCount = count);
     } catch (_) {}
   }

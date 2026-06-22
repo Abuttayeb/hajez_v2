@@ -63,7 +63,7 @@ class _FilterScreenState extends State<FilterScreen> {
                 {'value': 'villa', 'label': 'فيلا', 'icon': Icons.villa_outlined},
                 {'value': 'resort', 'label': 'منتجع', 'icon': Icons.spa_outlined},
               ].map((t) => GestureDetector(
-                onTap: () => setState(() => _type = t['value']!),
+                onTap: () => setState(() => _type = t['value'] as String),
                 child: AnimatedContainer(
                   duration: const Duration(milliseconds: 250),
                   padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 10),
@@ -75,7 +75,7 @@ class _FilterScreenState extends State<FilterScreen> {
                   child: Row(mainAxisSize: MainAxisSize.min, children: [
                     Icon(t['icon'] as IconData, size: 16, color: _type == t['value'] ? AppColors.white : AppColors.darkSecondary),
                     const SizedBox(width: 6),
-                    Text(t['label']!, style: TextStyle(color: _type == t['value'] ? AppColors.white : AppColors.dark, fontFamily: 'Cairo', fontWeight: FontWeight.w600)),
+                    Text(t['label'] as String, style: TextStyle(color: _type == t['value'] ? AppColors.white : AppColors.dark, fontFamily: 'Cairo', fontWeight: FontWeight.w600)),
                   ]),
                 ),
               )).toList(),

@@ -962,7 +962,8 @@ class _FarmDetailScreenState extends State<FarmDetailScreen> {
                             initialCenter: LatLng(lat!, lng!),
                             initialZoom: 14,
                             interactionOptions:
-                                const InteractiveFlag.none,
+                                const InteractionOptions(
+                                    flags: InteractiveFlag.none),
                           ),
                           children: [
                             TileLayer(
