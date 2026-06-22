@@ -31,10 +31,10 @@
 
 ### تشغيل البناء
 
-- **تلقائي:** أي push على `main` يبني نسخة Release.
-- **يدوي:** تبويب **Actions → Android Build (APK + AAB) → Run workflow**، واختر `debug` لو بدك بناء سريع بدون توقيع (يحتاج فقط `GOOGLE_SERVICES_JSON_BASE64`).
+- **تلقائي:** أي push على `main` يبني نسخة Release APK.
+- **يدوي:** تبويب **Actions → Android Build (APK) → Run workflow**.
 
-الناتج (AAB/APK) يطلع كـ **Artifact** بنفس صفحة الـ run، تحت "Artifacts" بالأسفل.
+الناتج (APK) يطلع كـ **Artifact** بنفس صفحة الـ run، تحت "Artifacts" بالأسفل.
 
 ## التشغيل
 
